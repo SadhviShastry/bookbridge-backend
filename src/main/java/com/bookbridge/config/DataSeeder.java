@@ -89,7 +89,6 @@ public class DataSeeder implements CommandLineRunner {
                     {"Thinking, Fast and Slow", "Daniel Kahneman", "Academic", "Good", "How two systems drive the way we think.", "assets/thinkingfastandslow.jpg"},
                     {"You Don't Know JS", "Kyle Simpson", "Programming", "Good", "A deep dive into JavaScript.", "assets/youdontknowjs.jpg"},
                     {"Deep Work", "Cal Newport", "Self Help", "New", "Rules for focused success.", "assets/deepwork.jpg"},
-                    {"The Power of Your Subconscious Mind", "Joseph Murphy", "Self Help", "Good", "Classic guide to using the subconscious.", "assets/powerofsubconisiousmind.jpg"},
                     {"How to Win Friends & Influence People", "Dale Carnegie", "Business", "Like New", "Timeless principles for relationships.", "assets/howtowinfriends.jpg"},
                     {"Educated", "Tara Westover", "Academic", "Good", "A memoir about transformative education.", "assets/educated.jpg"},
                     {"The Power of Now", "Eckhart Tolle", "Self Help", "New", "A guide to spiritual enlightenment.", "assets/poweofnow.jpg"}
