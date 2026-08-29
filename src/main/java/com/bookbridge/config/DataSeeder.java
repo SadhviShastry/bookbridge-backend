@@ -78,8 +78,6 @@ public class DataSeeder implements CommandLineRunner {
             User owner = userRepo.findByEmailIgnoreCase("admin@bookbridge.com").orElse(null);
             if (owner != null) {
                 String[][] books = {
-                    {"Atomic Habits", "James Clear", "Self Help", "Like New", "Tiny changes, remarkable results.", "assets/images.jpg"},
-                    {"The Alchemist", "Paulo Coelho", "Novels", "Good", "A shepherd boy's journey to fulfil his personal legend.", "assets/download.jpg"},
                     {"Rich Dad Poor Dad", "Robert Kiyosaki", "Business", "Good", "What the rich teach their kids about money.", "assets/richdadpoordad.jpg"},
                     {"The 5 AM Club", "Robin Sharma", "Self Help", "New", "Own your morning, elevate your life.", "assets/5amclub.jpg"},
                     {"Sapiens", "Yuval Noah Harari", "Academic", "Like New", "A brief history of humankind.", "assets/sapiens.png"},
