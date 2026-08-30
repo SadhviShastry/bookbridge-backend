@@ -2,8 +2,8 @@ package com.bookbridge.controller;
 
 import com.bookbridge.dto.MessageSendRequest;
 import com.bookbridge.dto.MessageStartRequest;
+import com.bookbridge.dto.ThreadResponse;
 import com.bookbridge.entity.Message;
-import com.bookbridge.entity.MessageThread;
 import com.bookbridge.security.CurrentUser;
 import com.bookbridge.service.MessageService;
 import org.springframework.web.bind.annotation.*;
@@ -16,10 +16,10 @@ public class MessageController {
     public MessageController(MessageService messageService) { this.messageService = messageService; }
 
     @GetMapping("/threads")
-    public List<MessageThread> threads() { return messageService.threadsFor(CurrentUser.id()); }
+    public List<ThreadResponse> threads() { return messageService.threadsFor(CurrentUser.id()); }
 
     @PostMapping("/threads")
-    public MessageThread startThread(@RequestBody MessageStartRequest req) {
+    public ThreadResponse startThread(@RequestBody MessageStartRequest req) {
         return messageService.getOrCreateThread(CurrentUser.id(), req.ownerId(), req.bookId());
     }
 
