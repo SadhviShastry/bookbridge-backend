@@ -2,7 +2,7 @@ package com.bookbridge.controller;
 
 import com.bookbridge.dto.CreateRequestBody;
 import com.bookbridge.dto.DeliveryUpdateRequest;
-import com.bookbridge.entity.BorrowRequest;
+import com.bookbridge.dto.RequestResponse;
 import com.bookbridge.security.CurrentUser;
 import com.bookbridge.service.RequestService;
 import org.springframework.web.bind.annotation.*;
@@ -15,28 +15,28 @@ public class RequestController {
     public RequestController(RequestService requestService) { this.requestService = requestService; }
 
     @PostMapping
-    public BorrowRequest create(@RequestBody CreateRequestBody body) { return requestService.create(body, CurrentUser.id()); }
+    public RequestResponse create(@RequestBody CreateRequestBody body) { return requestService.create(body, CurrentUser.id()); }
 
     @GetMapping("/mine")
-    public List<BorrowRequest> mine() { return requestService.mine(CurrentUser.id()); }
+    public List<RequestResponse> mine() { return requestService.mine(CurrentUser.id()); }
 
     @GetMapping("/incoming")
-    public List<BorrowRequest> incoming() { return requestService.incoming(CurrentUser.id()); }
+    public List<RequestResponse> incoming() { return requestService.incoming(CurrentUser.id()); }
 
     @GetMapping("/borrowed")
-    public List<BorrowRequest> borrowed() { return requestService.borrowed(CurrentUser.id()); }
+    public List<RequestResponse> borrowed() { return requestService.borrowed(CurrentUser.id()); }
 
     @PutMapping("/{id}/accept")
-    public BorrowRequest accept(@PathVariable Long id) { return requestService.updateStatus(id, "Accepted", CurrentUser.id()); }
+    public RequestResponse accept(@PathVariable Long id) { return requestService.updateStatus(id, "Accepted", CurrentUser.id()); }
 
     @PutMapping("/{id}/reject")
-    public BorrowRequest reject(@PathVariable Long id) { return requestService.updateStatus(id, "Rejected", CurrentUser.id()); }
+    public RequestResponse reject(@PathVariable Long id) { return requestService.updateStatus(id, "Rejected", CurrentUser.id()); }
 
     @PutMapping("/{id}/complete")
-    public BorrowRequest complete(@PathVariable Long id) { return requestService.updateStatus(id, "Completed", CurrentUser.id()); }
+    public RequestResponse complete(@PathVariable Long id) { return requestService.updateStatus(id, "Completed", CurrentUser.id()); }
 
     @PutMapping("/{id}/delivery")
-    public BorrowRequest delivery(@PathVariable Long id, @RequestBody DeliveryUpdateRequest body) {
+    public RequestResponse delivery(@PathVariable Long id, @RequestBody DeliveryUpdateRequest body) {
         return requestService.updateDelivery(id, body, CurrentUser.id(), CurrentUser.isAdmin());
     }
 }
