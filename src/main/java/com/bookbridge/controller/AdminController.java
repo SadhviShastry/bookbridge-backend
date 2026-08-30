@@ -1,5 +1,6 @@
 package com.bookbridge.controller;
 
+import com.bookbridge.dto.RequestResponse;
 import com.bookbridge.entity.*;
 import com.bookbridge.repository.BookRepository;
 import com.bookbridge.repository.UserRepository;
@@ -51,7 +52,7 @@ public class AdminController {
     public void removeBook(@PathVariable Long id) { bookService.delete(id, CurrentUser.id(), true); }
 
     @GetMapping("/exchanges")
-    public List<BorrowRequest> exchanges() { return requestService.acceptedAndCompleted(); }
+    public List<RequestResponse> exchanges() { return requestService.acceptedAndCompleted(); }
 
     @GetMapping("/activity")
     public List<ActivityLog> activity() { return activityService.recent(); }
