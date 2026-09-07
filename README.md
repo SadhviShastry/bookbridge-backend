@@ -16,7 +16,7 @@
 
 ## ✨ Overview
 
-This is the REST API backend for **BookBridge**, a community book-sharing platform where users can lend, borrow, donate, exchange, or sell books. It's built with **Java 17 + Spring Boot 3**, secured with **JWT authentication**, and backed by a **MySQL** database. It powers the [BookBridge frontend](https://github.com/SadhviShastry/bookbridge-frontend) end-to-end  auth, book listings, requests, messaging, notifications, reviews, donations, memberships, and a full admin dashboard.
+This is the REST API backend for **BookBridge**, a community book sharing platform where users can lend, borrow, donate, exchange, or sell books. It's built with **Java 17 + Spring Boot 3**, secured with **JWT authentication**, and backed by a **MySQL** database. It powers the [BookBridge frontend](https://github.com/SadhviShastry/bookbridge-frontend) end to end  auth, book listings, requests, messaging, notifications, reviews, donations, memberships, and a full admin dashboard.
 
 ## 🧱 Tech Stack
 
@@ -38,7 +38,7 @@ Controller  →  Service  →  Repository  →  MySQL
  JWT Auth Filter + Spring Security (role-based: USER / ADMIN)
 ```
 
-Every response DTO is enriched at the service layer — e.g. a borrow request response includes the full book, owner, and requester details, not just their IDs — so the frontend never has to make extra round-trips.
+Every response DTO is enriched at the service layer   e.g. a borrow request response includes the full book, owner, and requester details, not just their IDs  so the frontend never has to make extra round rips.
 
 ## 📁 Project Structure
 
@@ -47,13 +47,13 @@ bookbridge-backend/
 └── src/main/java/com/bookbridge/
     ├── BookbridgeApplication.java
     ├── config/          # SecurityConfig, CorsConfig, DataSeeder (seeds admin + categories on first boot)
-    ├── controller/       # REST endpoints — one per resource
-    ├── dto/               # request/response records & enrichment DTOs
-    ├── entity/             # JPA entities (User, Book, BorrowRequest, Review, Donation, ...)
-    ├── exception/           # ApiException + global @RestControllerAdvice handler
-    ├── repository/           # Spring Data JPA repositories
-    ├── security/              # JwtUtil, JwtAuthFilter, CurrentUser helper
-    └── service/                 # business logic
+    ├── controller/      # REST endpoints  one per resource
+    ├── dto/             # request/response records & enrichment DTOs
+    ├── entity/          # JPA entities (User, Book, BorrowRequest, Review, Donation, ...)
+    ├── exception/       # ApiException + global @RestControllerAdvice handler
+    ├── repository/      # Spring Data JPA repositories
+    ├── security/        # JwtUtil, JwtAuthFilter, CurrentUser helper
+    └── service/         # business logic
 ```
 
 ## 🚀 Features
