@@ -92,8 +92,8 @@ The frontend that consumes this API:
 
 ## 👩‍💻 Author
 
-Built by **Sadhvi Shastry** as a full-stack mini project — K. C. College of Engineering and Management Studies & Research, Department of Information Technology.
+Built by **Sadhvi Shastry** as a full-stack mini project   K. C. College of Engineering and Management Studies & Research, Department of Information Technology.
 
 ---
 
-<p align="center">Made with ☕ and Spring Boot — BookBridge, 2026</p>
+<p align="center">Made with ☕ and Spring Boot  BookBridge, 2026</p>
