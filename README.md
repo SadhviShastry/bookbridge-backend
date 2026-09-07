@@ -1,4 +1,4 @@
-# 🔧 BookBridge — Backend
+# 🔧 BookBridge  Backend
 
 > The Spring Boot + MySQL engine powering BookBridge.
 
@@ -59,16 +59,16 @@ bookbridge-backend/
 ## 🚀 Features
 
 - 🔐 JWT auth with BCrypt-hashed passwords and role-based access control (`USER` / `ADMIN`)
-- 📚 Book CRUD — Lend, Donate, Exchange, or Sell listings with category, condition, and cover image
-- 📩 Full request lifecycle — create, accept, reject, complete, with automatic due-date and availability handling
+- 📚 Book CRUD  Lend, Donate, Exchange, or Sell listings with category, condition, and cover image
+- 📩 Full request lifecycle  create, accept, reject, complete, with automatic due-date and availability handling
 - 💬 Threaded messaging between owner and requester
 - 🔔 In-app notifications for every request/review/message event
 - ⭐ Reviews tied to completed exchanges, with live rating recalculation
 - 💰 Donations with optional message, tracked platform-wide
-- 🏅 Auto-computed badges based on user activity
+- 🏅 Auto computed badges based on user activity
 - 👑 Membership tiers
 - 📅 Community events/offers
-- 🛠️ Admin endpoints — stats, user/listing moderation, exchange & delivery coordination, category management, donation records, full activity log
+- 🛠️ Admin endpoints  stats, user/listing moderation, exchange & delivery coordination, category management, donation records, full activity log
 - 🌱 `DataSeeder` auto-creates an admin account, default categories, and sample events on first boot — no manual SQL required
 
 ## 🌐 Deployment
