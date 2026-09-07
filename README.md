@@ -3,7 +3,7 @@
 > The Spring Boot + MySQL engine powering BookBridge.
 
 **🔗 Live Site:** [https://mybookbridge.netlify.app](https://mybookbridge.netlify.app)
-**🔗 Frontend Repo:** [bookbridge-frontend](https://github.com/SadhviShastry/bookbridge-frontend)
+**🔗 Frontend Repo:** [bookbridge-frontend](https://github.com/SadhviShastry/BookbrigeFrontend)
 **🔗 Live API:** [https://bookbridge-backend-vrkx.onrender.com/api](https://bookbridge-backend-vrkx.onrender.com/api)
 
 ![Status](https://img.shields.io/badge/status-live-brightgreen)
@@ -88,7 +88,7 @@ Key environment variables to configure on your host:
 ## 📦 Related Repository
 
 The frontend that consumes this API:
-👉 **[github.com/SadhviShastry/bookbridge-frontend](https://github.com/SadhviShastry/bookbridge-frontend)**
+👉 **[github.com/SadhviShastry/bookbridge-frontend](https://github.com/SadhviShastry/BookbrigeFrontend)**
 
 ## 👩‍💻 Author
 
