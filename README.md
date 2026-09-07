@@ -71,47 +71,6 @@ bookbridge-backend/
 - 🛠️ Admin endpoints — stats, user/listing moderation, exchange & delivery coordination, category management, donation records, full activity log
 - 🌱 `DataSeeder` auto-creates an admin account, default categories, and sample events on first boot — no manual SQL required
 
-## 🖥️ Running Locally
-
-### Prerequisites
-- Java 17 (JDK)
-- Maven
-- A MySQL instance (local or cloud — e.g. Railway)
-
-### Steps
-
-1. Clone this repo:
-   ```bash
-   git clone https://github.com/SadhviShastry/bookbridge-backend.git
-   cd bookbridge-backend
-   ```
-2. Set the required environment variables:
-   ```bash
-   DB_HOST=<your-mysql-host>
-   DB_PORT=3306
-   DB_NAME=bookbridge
-   DB_USER=<your-mysql-user>
-   DB_PASSWORD=<your-mysql-password>
-   JWT_SECRET=<a long random string>
-   CORS_ORIGINS=http://127.0.0.1:5500,http://localhost:5500
-   ```
-3. Run:
-   ```bash
-   mvn spring-boot:run
-   ```
-4. Tables are auto-created by Hibernate (`spring.jpa.hibernate.ddl-auto=update`) — no manual schema setup needed.
-5. Verify it's running:
-   ```
-   http://localhost:8080/api/categories
-   ```
-
-## 🔑 Default Admin Account (seeded on first boot)
-
-| Field | Value |
-|---|---|
-| Email | `admin@bookbridge.com` |
-| Password | `admin123` — **change immediately after first login in production** |
-
 ## 🌐 Deployment
 
 This backend is deployed as a **Docker web service on Render**, connected to a **MySQL instance on Railway**. See the [`Dockerfile`](./Dockerfile) for the build (Maven build stage → lightweight JRE runtime stage).
